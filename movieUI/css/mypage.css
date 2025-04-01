@@ -1,0 +1,156 @@
+@import "./global.css";
+/* 전체 프로필 섹션을 좌우로 나란히 배치 */
+.profile-section {
+  display: flex; /* 가로 정렬 */
+  justify-content: center; /* 가운데 정렬 */
+  gap: 2rem; /* 사이 간격 */
+  padding: 2rem 1rem; /* 상하/좌우 여백 */
+}
+
+/* 각각의 프로필 */
+.profile {
+  display: flex;
+  flex-direction: column; /* 위아래 정렬 */
+  align-items: center; /* 가로 가운데 정렬 */
+  color: white; /* 글자색 흰색 */
+  font-size: 14px;
+}
+/* 프로필 이미지 스타일 */
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* 동그랗게 만들기 */
+  object-fit: cover; /* 이미지가 잘릴 수 있어도 꽉 채움 */
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--purple); /* 보라색 테두리 (변수 사용) */
+}
+/* 새 프로필 (add 버튼) 스타일 */
+.profile.new {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1); /* 반투명 배경 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  border: 2px dashed var(--border); /* 점선 테두리 */
+  cursor: pointer;
+}
+.profile.new .material-icons-outlined {
+  font-size: 30px;
+  margin-bottom: 0.3rem;
+}
+
+/* 이어보기 전체 섹션 */
+.continue-watching {
+  padding: 1.5rem 1rem;
+}
+
+/* 이어보기 제목 */
+.continue-watching h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* 이어보기 리스트 - 가로 정렬 */
+.watching-list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto; /* 가로로 넘길 수 있게 */
+  padding-bottom: 0.5rem;
+}
+
+/* 개별 아이템 */
+.watching-item {
+  flex: 0 0 auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 이미지 스타일 */
+.watching-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /*  가로가 긴 와이드한 이미지 비율 */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* 제목 텍스트 */
+.watching-item p {
+  font-size: 0.85rem;
+  line-height: 1.2;
+  word-break: keep-all;
+  padding: 0 4px; /* 너무 줄바꿈 많이 안 생기게 양옆 여백 확보 */
+}
+
+/* 전체 찜한 목록 섹션 여백 설정 */
+.wishlist {
+  padding: 2rem 1.2rem;
+}
+
+/* 섹션 제목 스타일 (크기 + 하단 여백 + 굵기) */
+.wishlist h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* 찜한 항목 리스트 전체 설정 */
+.wishlist-list {
+  display: flex; /* 세로 정렬을 위한 플렉스 설정 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  gap: 1rem; /* 아이템 간 간격 */
+  padding: 0; /* 기본 ul 패딩 제거 */
+  margin: 0; /* 기본 마진 제거 */
+  list-style: none; /* 점 없애기 */
+}
+
+/* 개별 찜한 아이템 카드 스타일 */
+.wishlist-item {
+  display: flex; /* 이미지 + 텍스트 + 버튼 가로 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  gap: 1rem; /* 요소 사이 간격 */
+  padding: 1rem; /* 내부 여백 */
+  background-color: rgba(255, 255, 255, 0.05); /* 연한 배경색 */
+  border-radius: 10px; /* 카드형 모서리 둥글게 */
+}
+
+/* 썸네일 이미지 스타일 */
+.wishlist-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover; /* 이미지 잘리더라도 꽉 채우기 */
+  border-radius: 8px; /* 살짝 둥글게 */
+}
+
+/* 텍스트 영역 info 박스 */
+.wishlist-item .info {
+  flex-grow: 1; /* 가로 공간을 넓게 차지하게 함 */
+}
+
+/* 제목 텍스트 */
+.wishlist-item .title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+/* 설명 텍스트 (배우 등) */
+.wishlist-item .desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7); /* 연한 흰색 */
+}
+
+/*  아이콘 버튼 (재생 버튼) */
+.play-button {
+  font-size: 1.8rem; /* 크게 강조 */
+  color: var(--purple); /* 보라색 강조 (변수 사용) */
+  cursor: pointer; /* 마우스 올리면 클릭 가능 표시 */
+}

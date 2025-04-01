@@ -1,0 +1,19 @@
+/* css 꽃 -> 레이아웃 플렉스박스 */
+/* 플렉스 박스 원칙
+부모님만 플렉스 할수있어
+
+*/
+body {
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+}
+
+#second {
+  background-color: bisque;
+}
